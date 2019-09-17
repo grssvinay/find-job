@@ -15,7 +15,8 @@ describe('ResultsContainer component test', () => {
       _id: 1234,
     }, {
       _id: 2345,
-    }]
+    }],
+    isLoading: false
   };
 
   it('renders the mocked ResultsContainer component', () => {
@@ -33,7 +34,18 @@ describe('ResultsContainer component test', () => {
       <ResultsContainer {...data}/>);
     const elem = getByTestId('results-test');
 
-    expect(elem.firstChild.innerHTML).toBe('No Results Found');
+    expect(elem.firstChild.innerHTML).toBe('NO RESULTS FOUND');
+    expect(elem.children.length).toBe(1);
+  });
+
+  it('renders the mocked ResultsContainer component with loading message', () => {
+    data.searchResults = [];
+    data.isLoading = true;
+    const {getByTestId} = render(
+      <ResultsContainer {...data}/>);
+    const elem = getByTestId('results-test');
+
+    expect(elem.firstChild.innerHTML).toBe('PLEASE WAIT WHILE LOADING...');
     expect(elem.children.length).toBe(1);
   });
 });

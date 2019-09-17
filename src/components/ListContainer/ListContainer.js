@@ -9,7 +9,7 @@ export class ListContainer extends Component {
     return (
       <div className="jobs_list">
         <ul>
-          {this.props.jobs && this.props.jobs.map(post => <JobPost {...post}/>)}
+          {this.props.jobs && this.props.jobs.map(post => <JobPost key={post._id} {...post}/>)}
         </ul>
       </div>
     );

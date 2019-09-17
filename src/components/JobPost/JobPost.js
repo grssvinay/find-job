@@ -5,7 +5,7 @@ export class JobPost extends Component {
 
   render() {
     return (
-      <li key={this.props._id || (new Date().getTime())}>
+      <li>
         <div className="title_exp">
           <div className="title">{this.props.title}</div>
           <div className="experience">{this.props.experience}</div>

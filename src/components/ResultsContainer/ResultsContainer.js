@@ -17,7 +17,9 @@ export class ResultsContainer extends Component {
                 </div>
                 <ListContainer jobs={this.props.searchResults}/>
               </div>
-            ) : ( <div>No Results Found</div> )
+            ) : (this.props.isLoading ? (
+              <div className="results-loader-message">PLEASE WAIT WHILE LOADING...</div>) : (
+              <div className="results-loader-message">NO RESULTS FOUND</div>))
         }
       </div>
     );

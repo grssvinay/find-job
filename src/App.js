@@ -15,14 +15,19 @@ export class App extends Component {
       totalProfiles: [],
       experienceOptions: [],
       locationOptions: [],
-      skillsOptions: []
+      skillsOptions: [],
+      isLoading: true
     };
   }
 
   componentDidMount() {
     axios.get('https://nut-case.s3.amazonaws.com/jobs.json').then(jobPostings => {
-      this.setState({totalProfiles: jobPostings.data.data, totalCount: jobPostings.data.len});
-      this.setState({searchResults: jobPostings.data.data});
+      this.setState({
+        searchResults: jobPostings.data.data,
+        totalProfiles: jobPostings.data.data,
+        totalCount: jobPostings.data.len,
+        isLoading: false
+      });
       this.setState(processFiltersData(this.state.totalProfiles));
     });
   }
@@ -37,7 +42,8 @@ export class App extends Component {
                          experienceOptions={this.state.experienceOptions}
                          locationOptions={this.state.locationOptions}
                          skillsOptions={this.state.skillsOptions}/>
-        <ResultsContainer searchResults={this.state.searchResults}
+        <ResultsContainer isLoading={this.state.isLoading}
+                          searchResults={this.state.searchResults}
                           totalCount={this.state.totalCount}
                           totalProfiles={this.state.totalProfiles}/>
       </div>);

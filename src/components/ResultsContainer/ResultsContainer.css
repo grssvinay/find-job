@@ -6,3 +6,11 @@
     text-align: right;
     padding: 0px 30px;
 }
+
+.results-loader-message {
+    margin: 100px 0 30px;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 5px;
+    color: lightgray;
+}

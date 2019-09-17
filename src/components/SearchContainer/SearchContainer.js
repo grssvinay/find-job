@@ -25,7 +25,8 @@ export class SearchContainer extends Component {
         <div className="optionFields">
           <div>
             <h4>Experience</h4>
-            <Select options={this.props.experienceOptions} onChange={this.updateExperiencePref}/>
+            <Select options={this.props.experienceOptions}
+                    onChange={this.updateExperiencePref}/>
           </div>
           <div>
             <h4>Location</h4>
@@ -34,7 +35,8 @@ export class SearchContainer extends Component {
           </div>
           <div>
             <h4>Skills</h4>
-            <Select options={this.props.skillsOptions} isMulti onChange={this.updateSkillsPref}/>
+            <Select options={this.props.skillsOptions} isMulti
+                    onChange={this.updateSkillsPref}/>
           </div>
         </div>
         <div className="search">
