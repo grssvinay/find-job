@@ -1,0 +1,29 @@
+.searchContainer .optionFields {
+    text-align: left;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.searchContainer .optionFields > * {
+    width: 25%;
+}
+
+.searchContainer div h4 {
+    color: white;
+}
+
+.searchContainer div {
+    color: black;
+}
+
+.searchContainer .search {
+    margin-top: 20px;
+}
+
+.searchContainer .search button {
+    padding: 8px 25px;
+    font-size: 15px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+

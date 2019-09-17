@@ -1,0 +1,52 @@
+li {
+    margin: 5px;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+li:hover {
+    background-color: #1f2535ac;
+    cursor: pointer
+}
+
+.ta_l {
+    text-align: left;
+}
+
+li .title_exp {
+    padding: 10px 0;
+}
+
+li .title_exp .title {
+    float: left;
+    font-weight: bold;
+}
+
+li .title_exp .experience {
+    float: right;
+}
+
+li .title_exp div:last-child {
+    clear: both;
+}
+
+li .comp_name, li .location, li .skills {
+    text-align: left;
+    padding: 5px 0;
+}
+
+li .foot {
+    margin: 10px 0;
+}
+
+li .foot .job_source {
+    float: left;
+}
+
+li .foot .job_type {
+    float: right;
+}
+
+li .foot div:last-child {
+    clear: both;
+}
