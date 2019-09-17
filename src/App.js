@@ -37,7 +37,7 @@ export class App extends Component {
   render() {
     return (
       <div className="App container" data-testid="app-test">
-        <div>FindJob</div>
+        <h1>Find&nbsp;Job</h1>
         <SearchContainer updateState={this.updateState}
                          experienceOptions={this.state.experienceOptions}
                          locationOptions={this.state.locationOptions}

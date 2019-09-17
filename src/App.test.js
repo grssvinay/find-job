@@ -19,7 +19,7 @@ describe('App component test', () => {
     const { queryByText, getByLabelText, getByText, getByTestId, container } = render(<App />);
     const elem = getByTestId('app-test');
 
-    expect(elem.firstChild.innerHTML).toBe('FindJob');
+    expect(elem.firstChild.innerHTML).toBe('Find&nbsp;Job');
     expect(elem.children.length).toBe(3);
 
   });

@@ -16,6 +16,17 @@ In the project directory, you can run:
  
 `npm install --save-dev @testing-library/react`
 
+
+#### Fontawesome Icons
+
+Installation
+
+`npm i --save @fortawesome/fontawesome-svg-core` | `yarn add @fortawesome/fontawesome-svg-core`
+
+`npm i --save @fortawesome/free-solid-svg-icons` | `yarn add @fortawesome/free-solid-svg-icons`
+
+`npm i --save @fortawesome/react-fontawesome` | `yarn add @fortawesome/react-fontawesome`
+
 ### Run Application
 
 To start the application

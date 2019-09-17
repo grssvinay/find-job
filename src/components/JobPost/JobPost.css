@@ -1,7 +1,11 @@
 li {
     margin: 5px;
     padding: 30px;
-    border-radius: 5px;
+    border-bottom: 1px dashed ghostwhite;
+}
+
+.clear {
+    clear: both;
 }
 
 li:hover {
@@ -15,6 +19,8 @@ li:hover {
 
 li .title_exp {
     padding: 10px 0;
+    line-height: 40px;
+    vertical-align: middle;
 }
 
 li .title_exp .title {
@@ -24,29 +30,61 @@ li .title_exp .title {
 
 li .title_exp .experience {
     float: right;
+    font-weight: normal;
 }
 
 li .title_exp div:last-child {
     clear: both;
 }
 
-li .comp_name, li .location, li .skills {
-    text-align: left;
-    padding: 5px 0;
+li .comp_name, li .location, li .skills, li .salary {
+    display: flex;
+    margin: 10px 0 5px;
+}
+
+li .comp_name .ta_l, li .location .ta_l, li .skills .ta_l {
+    padding-left: 10px;
+}
+
+li .salary {
+    margin-top: 40px;
+}
+
+li .salary span {
+    font-weight: bold;
+}
+
+li .salary > div {
+    padding-left: 10px;
+}
+
+li .jobDesc .jd_content pre {
+    overflow-x: auto;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+    font-size: 14px;
 }
 
 li .foot {
-    margin: 10px 0;
+    margin: 20px 0 10px;
 }
 
 li .foot .job_source {
     float: left;
+    display: flex;
+}
+
+li .foot .job_source span {
+    font-weight: bold;
+}
+
+li .foot .job_source > div {
+    padding-left: 10px;
 }
 
 li .foot .job_type {
     float: right;
-}
-
-li .foot div:last-child {
-    clear: both;
+    text-transform: uppercase   ;
 }
