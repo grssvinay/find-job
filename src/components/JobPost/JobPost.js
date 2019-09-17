@@ -7,7 +7,7 @@ export class JobPost extends Component {
 
   render() {
     return (
-      <li>
+      <li data-testid="jobPost-test">
         <div className="title_exp">
           <h4 className="title">{this.props.title}</h4>
           <h4 className="experience">{this.props.experience}</h4>
@@ -33,7 +33,6 @@ export class JobPost extends Component {
             </div>
           </div>)
         }
-
         {
           this.props.skills && (<div className="skills">
             <FontAwesomeIcon icon={faLayerGroup}/>
@@ -45,7 +44,6 @@ export class JobPost extends Component {
           <span>Salary: </span>
           <div className="ta_l">{this.props.salary || "N/A"}</div>
         </div>
-
 
         <div className="foot">
           {
