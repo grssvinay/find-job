@@ -16,8 +16,8 @@ export class SearchContainer extends Component {
   };
 
   updateExperiencePref = (selectedOptions) => this.expPref = selectedOptions.label;
-  updateLocationPref = (selectedOptions) => selectedOptions.forEach(opt => this.locationPref.push(opt.label));
-  updateSkillsPref = (selectedOptions) => selectedOptions.forEach(opt => this.skillsPref.push(opt.label));
+  updateLocationPref = (selectedOptions) => this.locationPref = selectedOptions.label;
+  updateSkillsPref = (selectedOptions) => this.skillsPref = selectedOptions;
 
   render() {
     return (
@@ -30,12 +30,12 @@ export class SearchContainer extends Component {
           </div>
           <div>
             <h4>Location</h4>
-            <Select options={this.props.locationOptions} isMulti
+            <Select options={this.props.locationOptions}
                     onChange={this.updateLocationPref}/>
           </div>
           <div>
             <h4>Skills</h4>
-            <Select options={this.props.skillsOptions} isMulti
+            <Select options={this.props.skillsOptions}
                     onChange={this.updateSkillsPref}/>
           </div>
         </div>
